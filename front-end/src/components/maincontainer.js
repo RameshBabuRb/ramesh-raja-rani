@@ -53,7 +53,7 @@ export default function Maincontainer() {
     }
     async function emailSend(FinalList) {
         console.log(FinalList)
-        let a = await axios.post('http://localhost:8000/users', { "FinalList": FinalList })
+        let a = await axios.post('https://ramesh-raja-rani-backend.vercel.app/users', { "FinalList": FinalList })
         // Object.keys(FinalList).map((email) => {
         //     const config = {
         //         Host: "smtp.elasticemail.com",
@@ -71,7 +71,7 @@ export default function Maincontainer() {
         // })
     }
     async function swapEmailSend(email, title) {
-        let a = await axios.post('http://localhost:8000/users', { "swapMail": { email: email, title: title } })
+        let a = await axios.post('https://ramesh-raja-rani-backend.vercel.app/users', { "swapMail": { email: email, title: title } })
         // const config = {
         //     Host: "smtp.elasticemail.com",
         //     Username: "ramesh.official@yopmail.com",
