@@ -7,8 +7,11 @@ require("dotenv").config();
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
-
+app.use(cors({
+  orgin:["https://ramesh-raja-rani-frontend.vercel.app"],
+  method:["POST","GET"],
+  credential:true
+}));
 
 // Get all users
 app.post('/users', (req, res) => {
